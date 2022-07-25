@@ -3,10 +3,10 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Home from './Home';
+import Home from './Home/Home';
 import Layout from './Page/layout';
-import List from './List';
-import About from './about';
+import List from './List/List';
+import About from './About/About';
 
 
 export default function App() {
