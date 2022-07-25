@@ -1,7 +1,8 @@
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Navigate,
 } from 'react-router-dom';
 import Home from './Home/Home';
 import Layout from './Page/layout';
@@ -17,6 +18,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="list" element={<List />} />
         <Route path="about" element={<About />} />
+        <Route path="*" element={<Navigate to="/" replace/>} />
       </Routes>
     </Router>
   );
