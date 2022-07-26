@@ -9,9 +9,11 @@ export default function Menu() {
   const className = classNames(styles.Menu, {
     [styles.Open]: isOpen,
   });
-  const handleClick = () => { 
+  const handleClick = (e) => { 
+    e.stopPropagation();
     setIsOpen((isOpen) => !isOpen);
   };
+  
   useEffect(() => {
     if (!isOpen) return;
     const clickHandler = () => setIsOpen(false);
