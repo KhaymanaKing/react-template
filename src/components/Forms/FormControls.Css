@@ -1,0 +1,58 @@
+.FormControl {
+    display: block;
+    &:not(:first-child){
+        margin-top: 20px;
+    }
+    
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+
+
+    space{
+        display: block;
+        front-size: 0.8em;
+        margin-bottom: 1px;
+    }
+    input:not([type='checkbox']),
+    select,
+    textarea{
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 5px;
+        font-size: 1em;
+        font-family: var(--primary-font);
+    }
+
+    .CheckBoxLabel {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 4px;
+    }
+    input[type='checkbox'] {
+        width: 18px;
+        height: 18px;
+        magin: 0px;
+    }
+    textarea {
+        height: 6em;
+        resize: vertical;
+    }
+}
+
+//add background color
+.FormButton {
+    padding: 10px 15px;
+    border: 1px solid var(--header-color);
+    cursor: pointer;
+}
+
+.Fieldset{
+    border-top: 1px solid black;
+    
+    legend {
+        text-align: center;
+    }
+}
