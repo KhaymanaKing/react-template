@@ -26,6 +26,7 @@ export default function Menu() {
       clickHandler();
     };
     document.addEventListener('keydown', keyHandler);
+    
     return() => {
       document.removeEventListener('click', clickHandler);
       document.removeEventListener('keydown', keyHandler);
