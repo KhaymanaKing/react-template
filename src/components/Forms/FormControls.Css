@@ -41,8 +41,8 @@
         resize: vertical;
     }
 }
-
-//add background color
+/* 
+//TODO add background color */
 .FormButton {
     padding: 10px 15px;
     border: 1px solid var(--header-color);
