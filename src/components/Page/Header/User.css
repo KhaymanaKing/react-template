@@ -9,10 +9,10 @@
         position: absolute;
         top: 100%;
         right: 0;
-        background: green;
+        background:var(--color-3);
         display: grid;
         width: max-content;
-        padding: 20px;
+        padding: var(--padding);
         gap: 10px;
     }
     &.Open {
