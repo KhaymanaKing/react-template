@@ -1,30 +1,34 @@
-.Header { 
-    position: -sticky;
-    top: 0;
-    background: mediumaquamarine;
+.Header {
+    --header-height: 35px;
+    @media (min-width: 750px) {
+    --header-height: 50px;
+    }
 
-    height: 30px;
-    
+    position: sticky;
+    top: 0;
+    background: var(--header-color);
+    padding-right: var(--padding);
+    height: var(--header-height);
+
     display: grid;
-    grid-template-columns: max-content 1fr 50px;
+    grid-template-columns: auto 1fr auto;
     gap: 20px;
     align-items: center;
 
-
-.NavigationContainer {
+    .NavigationContainer {
     display: none;
     justify-self: end;
-}
+    }
 
-@media (min-width: 750px) {
-    height: 50px;
-    padding-left: 20;
-    .MenuContainer{
+    @media (min-width: 750px) {
+    padding-left: var(--padding);
+
+    .MenuContainer {
         display: none;
     }
-    .NavigationContainer{
+
+    .NavigationContainer {
         display: initial;
     }
-  }
-  
+    }
 }
