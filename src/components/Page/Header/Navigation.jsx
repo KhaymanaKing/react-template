@@ -4,9 +4,18 @@ import styles from './Navigation.css';
 export default function Navigation() {
   return(
     <nav className={styles.Navigation}>
-      <Link to="/">Home</Link>
-      <Link to="list">List</Link>
-      <Link to="about">About</Link>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="list">List</NavLink>
+      <NavLink to="about">About</NavLink>
     </nav>
+  );
+}
+
+// eslint-disable-next-line react/prop-types
+function NavLink({ children, ...rest }) {
+  return (
+    <Link className="label-text" {...rest}>
+      {children}
+    </Link>
   );
 }
