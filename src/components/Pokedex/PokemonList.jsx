@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import styles from './PokmonList.css';
-//TODO bring in styling
+import styles from './PokemonList.css';
 
 export default function PokemonList({ pokedex, onLoadNext }) {
   const { ref, inView } = useInView();

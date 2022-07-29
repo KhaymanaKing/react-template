@@ -7,6 +7,7 @@ export default function Navigation() {
       <NavLink to="/">Home</NavLink>
       <NavLink to="list">List</NavLink>
       <NavLink to="about">About</NavLink>
+      <NavLink to="pokedex">Pokedex</NavLink>
     </nav>
   );
 }
