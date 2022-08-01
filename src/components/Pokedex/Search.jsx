@@ -13,7 +13,7 @@ export default function Search() {
   const { params, setParams } = useSearch();
   const [formData, setFormData] = useState({});
   const { pokemon, type } = params;
-  
+
   useEffect(() => {
     setFormData({ pokemon, type });
   }, [pokemon, type]);
@@ -42,7 +42,7 @@ export default function Search() {
       >
         <option value={''}>all types</option>
         {types.map(({ type, count }) => (
-          <TypeOption key={types} type={type} count={count} />
+          <TypeOption key={type} type={type} count={count} />
         ))}
       </SelectControl>
       <FormButton>👀</FormButton>
