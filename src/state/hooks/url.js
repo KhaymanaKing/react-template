@@ -1,20 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
+
 export function useSearch() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [params, setParamsObject] = useState({});
+  
+  const search = useMemo(() => {
+    return Object.fromEntries(searchParams.entries());
+  }, [searchParams]);
 
-  useEffect(() => {
-    setParamsObject(Object.fromEntries(searchParams.entries()));
-  }, [searchParams.toString()]);
-
-  const setParams = (search) => {
+  const setSearch = (search) => {
     const clean = removeEmptyKeys(search);
     setSearchParams(clean);
   };
-
-  return { params, setParams };
+  
+  return[search, setSearch];
 }
+
 
 export function removeEmptyKeys(obj) {
   const filtered = Object.entries(obj).filter(

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useTypes } from '../../state/hooks/pokedex.js';
 import { useSearch } from '../../state/hooks/url.js';
+import { useTypes } from '../../state/hooks/pokedex.js';
 import { 
   InputControl,
   SelectControl,
@@ -10,9 +10,9 @@ import styles from './Search.css';
 
 export default function Search() {
   const { types } = useTypes();
-  const { params, setParams } = useSearch();
+  const [search, setSearch] = useSearch();
   const [formData, setFormData] = useState({});
-  const { pokemon, type } = params;
+  const { pokemon, type } = search;
 
   useEffect(() => {
     setFormData({ pokemon, type });
@@ -20,19 +20,21 @@ export default function Search() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setParams(formData);
+    setSearch(formData);
   };
 
   const handleChange = ({ target: { name, value } }) => {
     setFormData((formData) => ({ ...formData, [name]: value }));
   };
+
   return (
     <form className={styles.Search} onSubmit={handleSubmit}>
       <InputControl
         label="pokemon"
         name="pokemon"
         value={formData.pokemon}
-        onChange={handleChange} /> 
+        onChange={handleChange} 
+      /> 
 
       <SelectControl
         label="type"
@@ -45,7 +47,8 @@ export default function Search() {
           <TypeOption key={type} type={type} count={count} />
         ))}
       </SelectControl>
-      <FormButton>👀</FormButton>
+      
+      <FormButton>SEARCH</FormButton>
     </form>
   );
 }
