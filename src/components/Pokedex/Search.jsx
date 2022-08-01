@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useTypes } from '../../state/hooks/pokedex';
+import { useTypes } from '../../state/hooks/pokedex.js';
 import { useSearch } from '../../state/hooks/url.js';
 import { 
   InputControl,
@@ -13,6 +13,7 @@ export default function Search() {
   const { params, setParams } = useSearch();
   const [formData, setFormData] = useState({});
   const { pokemon, type } = params;
+  
   useEffect(() => {
     setFormData({ pokemon, type });
   }, [pokemon, type]);

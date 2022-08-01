@@ -11,7 +11,7 @@ export default function Pokedex() {
   return (
     <section className="Pokedex">
       <Search />
-      <PokemonList pokedex={pokedex} onLoad={addPage}/>
+      <PokemonList pokedex={pokedex} onLoadNext={addPage}/>
     </section>
   );
 }
