@@ -4,7 +4,7 @@ import { getPokedex, getTypes } from '../services/pokedex-services.js';
 export function useTypes() {
   const [types, setTypes] = useState([]);
   const [error, setError] = useState(null);
- 
+
   useEffect(() => {
     let ignore = false;
 
@@ -26,6 +26,7 @@ export function useTypes() {
 export function usePokedex(search, options) {
   const [error, setError] = useState(null);
   const [pokedex, setPokedex] = useState([]);
+  
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(1);
   const perPage = options?.perPage ?? 25;

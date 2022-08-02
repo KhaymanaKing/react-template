@@ -50,7 +50,7 @@ export default function Search() {
         ))}
       </SelectControl>
       
-      <FormButton>SEARCH</FormButton>
+      <FormButton>☑</FormButton>
     </form>
   );
 }
