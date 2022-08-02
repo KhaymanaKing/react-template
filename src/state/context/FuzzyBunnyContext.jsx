@@ -38,7 +38,7 @@ export default function FuzzyBunnyProvider({ children }) {
     }),
     [familiesDispatch, bunniesDispatch]
   );
-//State of the global varity. 
+  //State of the global variety. 
   return(
     <FuzzyBunnyStateContext.Provider value={stateValue}>
       <FuzzyBunnyDispatchContext.Provider value={dispatchValue}>
