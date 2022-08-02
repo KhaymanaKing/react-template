@@ -16,7 +16,7 @@ export default function PokemonList() {
   
 
   return (
-    <ul className="pokemonList">
+    <ul className={styles.PokemonList}>
       {pokedex.map((pokemon, i) => (
         <Card 
           key={pokemon._id}
@@ -29,6 +29,7 @@ export default function PokemonList() {
 //card component 
 function Card({ pokemon, loadRef }) {
   const { url_image, pokemon: name, type_1, type_2 } = pokemon;
+  
   return (
     <li className={styles.Card} ref={loadRef}>
       <img src={url_image} alt={name}/>
