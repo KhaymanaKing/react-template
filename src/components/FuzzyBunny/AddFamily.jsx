@@ -5,7 +5,7 @@ import styles from './AddFamily.css';
 
 export default function AddFamily() {
   const { add } = useFamilyActions();
-  const [familyName, setName] = useState();
+  const [familyName, setName] = useState('');
   const handleChange = ({ target }) => setName(target.value);
 
   const handleSubmit = async (e) => {

@@ -1,6 +1,6 @@
 import {
   InputControl,
-  // SelectControl,
+  SelectControl,
   TextAreaControl,
   CheckboxControl,
   FormButton,
@@ -27,6 +27,12 @@ export default function About() {
             placeholder="enter password"
             type="password"
             required/>
+            
+          <SelectControl label="type">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </SelectControl>
         </Fieldset>
         <CheckboxControl label="Are you a bot?" text="Yes"/>
         <TextAreaControl 

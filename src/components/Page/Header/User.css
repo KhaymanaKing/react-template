@@ -5,6 +5,10 @@
     align-items: center;
     gap: 5 px;
     
+    button {
+        color: var(--white-color);
+        background: transparent;
+    }
     .userMenu {
         position: absolute;
         top: 100%;

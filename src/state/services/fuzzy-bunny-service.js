@@ -12,13 +12,14 @@ export async function addFamily(family) {
 export async function getFamiliesWithBunnies() {
   const response = await client.from('bunnie_family').select(`
   id,
-  family,
-  bunnies: rabbits(
+  familyName,
+  rabbits: rabbits(
     id,
     familyId:family_id,
     name
   )`
   );
+  console.log('is this breaking it');
   return response;
 }
 

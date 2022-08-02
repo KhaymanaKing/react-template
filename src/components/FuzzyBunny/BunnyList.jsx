@@ -8,19 +8,19 @@ export function BunnyList() {
         <button>❌</button>
       </li>
       <li>
-        <h2>Barry</h2>
+        <h2>2nd Barry</h2>
         <button>❌</button>
       </li>
       <li>
-        <h2>Barry</h2>
+        <h2>3rd Barry</h2>
         <button>❌</button>
       </li>
       <li>
-        <h2>Barry</h2>
+        <h2>4th Barry</h2>
         <button>❌</button>
       </li>
       <li>
-        <h2>Barry</h2>
+        <h2>Last Barry</h2>
         <button>❌</button>
       </li>
       <form className={styles.AddBunny}>

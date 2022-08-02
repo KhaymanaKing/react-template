@@ -1,5 +1,6 @@
-import { useContext, useEffect, useState } from 'react';
-import { FuzzyBunnyContext } from '../context/FuzzyBunnyContext.jsx';
+import { useContext, useEffect, useState, useMemo } from 'react';
+import { FuzzyBunnyStateContext,
+  FuzzyBunnyDispatchContext } from '../context/FuzzyBunnyContext.jsx';
 import { 
   addFamily, 
   getFamiliesWithBunnies, 
@@ -9,7 +10,8 @@ import { showSuccess, showError } from '../services/toaster.js';
 
 export function useFamilies() {
   const [error, setError] = useState(null);
-  const { families, familyDispatch } = useContext(FuzzyBunnyContext);
+  const { families } = useContext(FuzzyBunnyStateContext);
+  const { familiesDispatch } = useContext(FuzzyBunnyDispatchContext);
 
   useEffect(() => {
     if(families) return;
@@ -23,7 +25,7 @@ export function useFamilies() {
         setError(error);
       }
       if (data) {
-        familyDispatch({ type: 'load', payload: data });
+        familiesDispatch({ type: 'load', payload: data });
       }
     };
 
@@ -50,9 +52,9 @@ function createDispatchActions(dispatch) {
 }
 
 export function useFamilyActions() {
-  const { familyDispatch } = useContext(FuzzyBunnyContext);
+  const { familiesDispatch } = useContext(FuzzyBunnyDispatchContext);
 
-  const createAction = createDispatchActions(familyDispatch);
+  const createAction = createDispatchActions(familiesDispatch);
 
   const add = createAction({
     service: addFamily,
@@ -72,6 +74,6 @@ export function useFamilyActions() {
     success: (data) => `Removed ${data.name}`,
   });
 
-  return { add, remove, update };
+  return useMemo(() => ({ add, remove, update }), [familiesDispatch]);
 
 }
