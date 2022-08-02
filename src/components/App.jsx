@@ -13,7 +13,7 @@ import Pokedex from './Pokedex/Pokedex';
 import FuzzyBunny from './FuzzyBunny/FuzzyBunny.jsx';
 import Families from './FuzzyBunny/Families';
 import FuzzyBunnyProvider from '../state/context/FuzzyBunnyContext.jsx';
-
+import Bunnies from './FuzzyBunny/Bunnies';
 export default function App() {
   return (
     <Router>
@@ -27,6 +27,7 @@ export default function App() {
             <Route path="pokedex" element={<Pokedex />} />
             <Route path="rabbits" element={<FuzzyBunny />}>
               <Route index element={<Families />} />
+              <Route path="bunnies" element={<Bunnies />} />
             </Route>
             <Route path="*" element={<Navigate to="/" replace/>} />
           </Route>
