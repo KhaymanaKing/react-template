@@ -11,7 +11,7 @@ export default function FamilyList(){
   return (
     <ul className={styles.FamilyList}>
       {families.map((family) => (
-        <Family key={family.id} family={family}/>
+        <Family key={family.id} family={family}/> 
       ))}
     </ul>
 
