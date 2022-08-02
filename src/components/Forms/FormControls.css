@@ -1,20 +1,19 @@
 .FormControl {
     display: block;
-    &:not(:first-child){
-        margin-top: 20px;
-    }
     
-    &:not(:last-child){
-        margin-bottom: 20px;
-    }
-
-
-    space{
+    .Label {
         display: block;
-        front-size: 0.8em;
-        margin-bottom: 1px;
+        margin-bottom: 7px;
+        color: var(--caption-color);
     }
-    input:not([type='checkbox']),
+
+    .Options {
+        display: grid;
+        row-gap: 4px;
+        column-gap: 10px;
+    }
+
+    input:not([type='checkbox']):not([type='radio']),
     select,
     textarea{
         display: block;
@@ -31,6 +30,7 @@
         gap: 5px;
         margin-top: 4px;
     }
+
     input[type='checkbox'] {
         width: 18px;
         height: 18px;
@@ -41,12 +41,14 @@
         resize: vertical;
     }
 }
-/* 
-//TODO add background color */
+
 .FormButton {
     padding: 10px 15px;
     border: 1px solid var(--header-color);
     cursor: pointer;
+    &.Icon {
+        font-size: 1.5em;
+    }
 }
 
 .Fieldset{
