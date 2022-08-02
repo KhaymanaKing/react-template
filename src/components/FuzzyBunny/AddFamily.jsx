@@ -3,6 +3,7 @@ import { useFamilyActions } from '../../state/hooks/fuzzyBunny.js';
 import { InputControl, FormButton } from '../Forms/FormsControls.jsx';
 import styles from './AddFamily.css';
 
+//the form for adding families.
 export default function AddFamily() {
   const { add } = useFamilyActions();
   const [familyName, setName] = useState('');

@@ -6,6 +6,8 @@ const navigation = [
   { to: '', label: 'Families' },
   { to: 'bunnies', label : 'Bunnies' },
 ];
+//this is eventually gunna be navigation for each 
+// family so you can click on it and see individual families?
 
 export default function FuzzyBunny() {
   return (

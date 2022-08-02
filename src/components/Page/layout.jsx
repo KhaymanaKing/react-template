@@ -4,6 +4,8 @@ import './reset.css';
 import './global.css';
 import styles from './Layout.css';
 
+//Not sure how this all plays in really. I'm guessing its the
+// general layout for each page
 export default function Layout() {
   return (
     <>

@@ -31,6 +31,9 @@ export default function Family({ family }){
     </li>
   );
 }
+//Creates the family card with a remove button and 
+//the ability to update their name using doubleclick 
+// or enter. The delete and edit functions are below
 
 function EditableHeader({ initialValue, onEdit }) {
   const [editing, setEditing] = useState(false);

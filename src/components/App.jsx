@@ -17,7 +17,11 @@ import Bunnies from './FuzzyBunny/Bunnies';
 export default function App() {
   return (
     <Router>
+      {/* toaster is what a library that allows for easy clean pop-up  */}
       <Toaster />
+      {/* Fuzzy Bunny Provider global state for my bunnies. 
+      I believe its so when i click off the page and go back 
+      it doesn't clear the state */}
       <FuzzyBunnyProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
