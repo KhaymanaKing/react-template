@@ -19,7 +19,6 @@ export async function getFamiliesWithBunnies() {
     name
   )`
   );
-  console.log('is this breaking it');
   return response;
 }
 
