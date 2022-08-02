@@ -3,12 +3,12 @@
     
     
     form {
+        background: var(--offset-color);
         padding: 30px 40px;
         width: 400px;
+        width: 500px;
+        display: grid;
+        row-gap: 25px;
     }
-    .PasswordControl {
-        input {
-            background: rgba(255,156,200,9);
-        }
-    }
+    
 }
