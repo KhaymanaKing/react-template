@@ -8,3 +8,36 @@ export async function addFamily(family) {
 
   return response;
 }
+
+export async function getFamiliesWithBunnies() {
+  const response = await client.from('bunnie_family').select(`
+  id,
+  family,
+  bunnies: rabbits(
+    id,
+    familyId:family_id,
+    name
+  )`
+  );
+  return response;
+}
+
+export async function removeFamily(id) {
+  const response = await client
+    .from('bunnie_family')
+    .delete()
+    .eq('id', id)
+    .single();
+
+  return response;
+}
+
+export async function updateFamily(family) {
+  const response = await client
+    .from('bunnie_family')
+    .update(family)
+    .eq('id', family.id)
+    .single();
+
+  return response;
+}

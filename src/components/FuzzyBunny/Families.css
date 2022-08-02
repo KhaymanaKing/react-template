@@ -1,0 +1,5 @@
+.Families {
+    display: grid;
+    gap: var(--padding-half);
+  }
+  

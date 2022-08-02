@@ -22,7 +22,7 @@ export default function AddFamily() {
         value={familyName}
         onChange={handleChange}
       />
-      <FormButton>Add Family</FormButton>
+      <FormButton>+</FormButton>
     </form>
   );
 }
