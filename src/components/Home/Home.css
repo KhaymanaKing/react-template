@@ -1,4 +1,4 @@
 .Home {
-    padding: 20px;
+    padding: var(--padding);
 
   }
