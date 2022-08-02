@@ -3,6 +3,10 @@ import { createContext, useReducer, useMemo } from 'react';
 export const FuzzyBunnyStateContext = createContext();
 export const FuzzyBunnyDispatchContext = createContext();
 
+//reducer is used for higher functions(?)
+// it takes whatever the case is and should apply the right function
+//its still kind of wizard magic.
+//Also global state 
 function reducer(list, { type, payload }) {
   switch(type) {
     case 'load':
@@ -34,7 +38,7 @@ export default function FuzzyBunnyProvider({ children }) {
     }),
     [familiesDispatch, bunniesDispatch]
   );
-
+//State of the global varity. 
   return(
     <FuzzyBunnyStateContext.Provider value={stateValue}>
       <FuzzyBunnyDispatchContext.Provider value={dispatchValue}>

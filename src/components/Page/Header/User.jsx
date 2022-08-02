@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from 'User.css';
 
+//user page which will be used for Auth. 
 export default function Menu(){
   const [isOpen, setIsOpen] = useState(false);
   const className = classNames(styles.User, {

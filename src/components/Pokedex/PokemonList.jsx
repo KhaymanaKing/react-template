@@ -2,7 +2,7 @@ import { useSearch } from '../../state/hooks/url.js';
 import { useInView } from 'react-intersection-observer';
 import { usePokedex } from '../../state/hooks/pokedex.js';
 import styles from './PokemonList.css';
-
+//should display a list of cards for the pokemon
 export default function PokemonList() {
   const [searchParams] = useSearch();
   const { pokedex, addPage } = usePokedex(searchParams);
@@ -26,7 +26,7 @@ export default function PokemonList() {
     </ul>
   );
 }
-
+//card component 
 function Card({ pokemon, loadRef }) {
   const { url_image, pokemon: name, type_1, type_2 } = pokemon;
   return (

@@ -7,6 +7,8 @@ import {
   FormButton,
 } from '../Forms/FormsControls.jsx';
 import styles from './Search.css';
+//uses 'form' component for search bar
+// little bit of wizard magic 
 
 export default function Search() {
   const { types } = useTypes();

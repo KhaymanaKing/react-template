@@ -3,6 +3,7 @@ import Navigation from './Navigation.jsx';
 import styles from './Menu.css';
 import classNames from 'classnames';
 
+//this supposed to be a popout menu. I need to refactor it to work properly
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
 
