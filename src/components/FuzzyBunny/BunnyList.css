@@ -29,10 +29,10 @@
     grid-template-columns: 1fr auto;
   
     input {
-      border: 1px solid pink;
+      border: 1px solid black;
       color: rgb(255, 131, 152);
       padding: 0 5px;
-      height: 30px;
+      height: 20px;
   
       &::placeholder {
         color: pink;
