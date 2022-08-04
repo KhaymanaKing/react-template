@@ -5,7 +5,10 @@
     display: grid;
     gap: var(--padding-half);
   
-    header {
+    > header {
+      position: sticky;
+      top: var(--header-height);
+      z-index: 500;
       background: var(--color-2);
       padding: 5px 0;
     }

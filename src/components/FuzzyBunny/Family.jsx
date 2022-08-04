@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useFamilyActions } from '../../state/hooks/fuzzyBunny.js';
 import DeleteButton from '../Forms/DeleteButton.jsx';
 import { InputControl } from '../Forms/FormsControls';
+import BunnyTags from './BunnyTags.jsx';
 import styles from './Family.css';
 
 
@@ -26,7 +27,9 @@ export default function Family({ family }){
       <div className={styles.ContentContainer}>
         <EditableHeader
           initialValue={family.name}
-          onEdit={handleEdit} />
+          onEdit={handleEdit} 
+        />
+        <BunnyTags bunnies={family.bunnies}/>
       </div>
     </li>
   );
