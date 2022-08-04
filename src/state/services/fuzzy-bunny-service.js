@@ -1,4 +1,4 @@
-import { client } from './client.js';
+import  client  from './supabase-client.js';
 
 export async function addFamily(family) {
   const response = await client

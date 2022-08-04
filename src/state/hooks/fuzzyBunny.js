@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState, useMemo } from 'react';
-import { FuzzyBunnyStateContext,
+import { 
+  FuzzyBunnyStateContext,
   FuzzyBunnyDispatchContext } from '../context/FuzzyBunnyContext.jsx';
 import { 
   addFamily, 
@@ -30,6 +31,7 @@ export function useFamilies() {
     };
 
     fetch();
+
     return () => (ignore = true); 
   }, []);
   return { families, error };
@@ -43,7 +45,7 @@ function createDispatchActions(dispatch) {
       if (error) showError(error.message);
 
       if (data) {
-        dispatch({ type, payload:data });
+        dispatch({ type, payload: data });
         const successMessage = success(data);
         showSuccess(successMessage);
       }

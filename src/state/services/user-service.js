@@ -1,15 +1,15 @@
-import { client } from './client.js';
+import  client  from './supabase-client.js';
 
 export function getUser() {
   return client.auth.user();
 }
 
-export async function signUp(email, password) {
-  return await client.auth.signUp({ email, password });
+export async function signUp(credentials) {
+  return await client.auth.signUp(credentials);
 }
 
-export async function signIn(email, password) {
-  return await client.auth.signIn({ email, password });
+export async function signIn(credentials) {
+  return await client.auth.signIn(credentials);
 }
 
 export async function signOut() {
@@ -42,14 +42,13 @@ export async function getProfile() {
     .single();
 }
 
-export async function updateProfile(profile) {
+export async function upsertProfile(profile) {
   const response = await client
     .from('profiles')
-    .select()
+    .upsert(profile)
     .eq('id', profile.id)
     .single();
 
-  saveLocalProfile(response.data);
   return response;
 }
 
