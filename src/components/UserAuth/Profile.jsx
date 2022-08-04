@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useProfile } from '../../state/hooks/userAuth.js';
 import { useForm } from '../../state/hooks/formData.js';
-import { FormButton, InputControl } from '../Forms/FormsControls.js';
+import { FormButton, InputControl } from '../Forms/FormsControls.jsx';
 import styles from './Profile.css';
 
 export default function Profile() {

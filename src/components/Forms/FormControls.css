@@ -45,7 +45,7 @@
 .FormButton {
     padding: 10px 15px;
     height: 40px;
-    background var(--button-color);
+    background: var(--button-color);
     border: 1px solid var(--header-color);
     cursor: pointer;
     
