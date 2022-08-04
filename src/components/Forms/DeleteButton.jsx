@@ -7,6 +7,8 @@ export default function DeleteButton({
 }) {
   const className = classNames(styles.DeleteButton, customClassName);
   return (
-    <button className={className} onClick={onClick}>❌</button>
+    <button className={className} onClick={onClick}>
+      ❌
+    </button>
   );
 }

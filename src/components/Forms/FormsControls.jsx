@@ -53,6 +53,7 @@ export function CheckboxControl({ label, ...rest }) {
 export function OptionGroupControl({
   label,
   name,
+  onChange,
   size = '100px',
   children,
 }) {
@@ -70,7 +71,7 @@ export function OptionGroupControl({
           }}
         >
           {Children.map(children, (child) =>
-            cloneElement(child, { name })
+            cloneElement(child, { name, onChange })
           )}
         </div>
       </fieldset>
