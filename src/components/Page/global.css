@@ -14,10 +14,17 @@
     --black-color: rgb(27, 42, 48);
     --caption-color: #454851;
     --white-color: white;
+    --button-color: #89dfe7;
+    --subheader-color: #40c0cb;
     
     --padding: 20px;
     @media (min-width: 750px) {
       --padding: 40px;
+    }
+
+    --header-height: 35px;
+    @media (min-width: 700px) {
+      --header-height: 50px;
     }
   }
   body {
