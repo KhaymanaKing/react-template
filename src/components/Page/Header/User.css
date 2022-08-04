@@ -12,7 +12,7 @@
     .userMenu {
         position: absolute;
         top: 100%;
-        right: 0;
+        right: calc(var(--padding) * -1);
         background:var(--color-3);
         display: grid;
         width: max-content;

@@ -1,4 +1,4 @@
-import Navigation from './Navigation.jsx';
+import Navigation from '../Navigation/Navigation.jsx';
 import Menu from './Menu.jsx';
 import styles from './Header.css';
 import User from './User.jsx';

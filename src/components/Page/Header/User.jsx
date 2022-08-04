@@ -7,7 +7,7 @@ import styles from 'User.css';
 export default function Menu(){
   const [isOpen, setIsOpen] = useState(false);
   const className = classNames(styles.User, {
-    [styles.Open]: !isOpen,
+    [styles.Open]: isOpen,
   });
   const handleClick = () => {
     setIsOpen((isOpen) => !isOpen);
